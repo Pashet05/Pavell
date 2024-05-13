@@ -35,7 +35,6 @@ class CategoryProduct(models.Model):
         return self.name.title()
 
 
-
 # Create your models here.
 class Author(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -97,5 +96,3 @@ class Comment(models.Model):
     def dislike(self):
         self.rating -= 1
         self.save()
-
-
